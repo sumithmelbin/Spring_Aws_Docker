@@ -21,6 +21,10 @@ public class SpringAwsDockerApplication {
 	public String welcome(@PathVariable String name) {
 		return "Hi " + name + " Welcome to Docker AWS ECS Example";
 	}
+	@GetMapping("/msg")
+	public String welcomeDemo() {
+		return " Application is running through Code Build. The image is pushed to ECS after building done....";
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringAwsDockerApplication.class, args);
